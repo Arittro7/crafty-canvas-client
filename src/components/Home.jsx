@@ -149,7 +149,7 @@ const Home = () => {
                 </div>
 
                 <div className='text-center'>
-                    <Link to={'/allArts'} ><button className="px-8 py-3 mt-10 bg-green-600 text-white font-semibold rounded-xl">View All Arts & Crafts</button></Link>
+                    <Link to={'/allArts'} ><button className="px-8 py-3 mt-10 bg-green-600 text-white font-semibold rounded-xl">View All Craft Items</button></Link>
                 </div>
 
 
@@ -198,8 +198,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?0" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-                                        <p>Visual Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Arnob</p>
+                                        <p>Backend Eng.</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -228,8 +228,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?1" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-                                        <p>Visual Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Pranto</p>
+                                        <p>Customer Manager</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -258,8 +258,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?2" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-                                        <p>Visual Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Anik</p>
+                                        <p>Store Keeper</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -288,8 +288,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?3" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-                                        <p>Visual Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Arittro</p>
+                                        <p>Founder & CEO</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -318,8 +318,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?4" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-                                        <p>Visual Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Istiaqua Ahmed</p>
+                                        <p>Marketing</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -348,8 +348,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?5" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-                                        <p>Visual Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Saifta</p>
+                                        <p>UI Designer</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -402,14 +402,14 @@ const Home = () => {
                                         <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                                         <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                                     </svg>
-                                    <p className="px-6 py-1 text-lg italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.</p>
+                                    <p className="px-6 py-1 text-lg italic">"Being part of this organization has been a transformative experience for me. The collaborative environment has not only allowed me to grow professionally but also personally. The leadership is supportive, and the community is incredibly welcoming. I’ve had the opportunity to work on meaningful projects that make a real difference, and the skills I’ve gained here are invaluable. I’m proud to be a member and look forward to continuing this journey."</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute bottom-0 right-0 w-8 h-8 text-gray-700">
                                         <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                                         <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
                                     </svg>
                                 </div>
                                 <span className="w-12 h-1 my-2 rounded-lg bg-violet-400"></span>
-                                <p>Leroy Jenkins</p>
+                                <p>Arnob</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -419,14 +419,14 @@ const Home = () => {
                                         <path fill="currentColor" d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                                         <path fill="currentColor" d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                                     </svg>
-                                    <p className="px-6 py-1 text-lg italic">Accusantium illum cupiditate harum asperiores iusto quos quasi quis quae! Fugit doloribus, voluptatum quidem magnam velit excepturi nobis, reprehenderit ducimus incidunt quisquam quae veritatis, quos iure harum.</p>
+                                    <p className="px-6 py-1 text-lg italic">"Joining this organization has been one of the best decisions of my life. The sense of purpose and camaraderie here is unmatched. The leadership team is always open to new ideas, and they provide all the resources we need to succeed. It’s a place where every member’s contribution is valued, and I’ve learned so much from working alongside such talented individuals. This experience has truly shaped who I am today."</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="absolute bottom-0 right-0 w-8 h-8 text-gray-700">
                                         <path fill="currentColor" d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                                         <path fill="currentColor" d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
                                     </svg>
                                 </div>
                                 <span className="w-12 h-1 my-2 rounded-lg bg-violet-400"></span>
-                                <p>Leroy Jenkins</p>
+                                <p>Anik</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
