@@ -6,7 +6,6 @@ import { CgMail } from "react-icons/cg";
 import { IoIosLogOut } from "react-icons/io";
 import { Tooltip } from 'react-tooltip'
 import { toast } from "react-toastify";
-// import myArt from '../../public/favicon.png'
 import myArt from '../../public/logo.png'
 
 
@@ -15,7 +14,7 @@ const Navbar = () => {
     const [openProfile, setOpenProfile] = useState(false)
     const [open, setOpen] = useState(false)
 
-    const hangleLogOut = () => {
+    const handleLogOut = () => {
         logOut()
         toast('log out successfully')
     }
@@ -38,16 +37,16 @@ const Navbar = () => {
                 <Link to={'/'} className="navbar-start flex items-center">
                     <img className="w-10 md:w-20" src={myArt} alt="" />
                     <p className="text-2xl md:text-3xl font-bold cursor-pointer">
-                        Crafty <span className="text-yellow-500">canvas</span></p>
+                        Crafty <span className="text-rose-500">canvas</span></p>
                 </Link>
 
 
                 <div className={`navbar-center md:flex md:items-center md:static absolute transition-all z-[-1] md:z-auto left-0  bg-white md:bg-transparent w-full md:w-auto  md:py-0 text-gray-500  py-4 top-16 ${open ? 'block' : 'hidden'} duration-500 md:shadow-none shadow-xl`}>
                     <ul className="text-lg font-medium flex lg:flex-row flex-col md:space-y-0 md:space-x-6 space-x-0 space-y-4 py-4 pl-5">
                         <li><NavLink to={'/'} style={styleNav}>Home</NavLink></li>
-                        <li><NavLink to={'/allArts'} style={styleNav}>All Art & craft Items</NavLink></li>
-                        <li><NavLink to={'/AddArts'} style={styleNav}>Add Art & Craft Item</NavLink></li>
-                        <li><NavLink to={'/myArts'} style={styleNav}>My Art & Craft List</NavLink></li>
+                        <li><NavLink to={'/allArts'} style={styleNav}>Craft Items</NavLink></li>
+                        <li><NavLink to={'/AddArts'} style={styleNav}>Add Craft Item</NavLink></li>
+                        <li><NavLink to={'/myArts'} style={styleNav}>My Craft List</NavLink></li>
                     </ul>
                 </div>
 
@@ -85,7 +84,7 @@ const Navbar = () => {
 
                                         <div className="flex items-center gap-3 my-4  pt-3 text-green-600">
                                             <IoIosLogOut className="text-xl"></IoIosLogOut>
-                                            <button onClick={hangleLogOut} className="text-lg font-medium duration-300 text-center">LogOut</button>
+                                            <button onClick={handleLogOut} className="text-lg font-medium duration-300 text-center">LogOut</button>
                                         </div>
                                     </div>
                                 </div>
@@ -93,8 +92,8 @@ const Navbar = () => {
 
                             :
                             <div className="space-x-2 flex items-center">
-                                <Link to={'/login'} className="px-8 py-3 bg-green-600 text-white font-semibold rounded-xl">Login</Link>
-                                <Link to={'/signUp'} className="px-8 py-3 hidden md:block bg-green-600 text-white font-semibold rounded-xl">Register</Link>
+                                <Link to={'/login'} className="px-8 py-3 bg-green-500 text-white font-semibold rounded-xl">Login</Link>
+                                <Link to={'/signUp'} className="px-8 py-3 hidden md:block bg-orange-400 text-black font-semibold rounded-xl">Register</Link>
                             </div>
                     }
                 </div>
