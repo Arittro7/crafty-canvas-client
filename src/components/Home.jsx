@@ -15,11 +15,11 @@ const Home = () => {
     document.title =  `Crafty Canvas | home ${location.pathname.slice(1)}`;
 
     const buttons = ['Card Making',
-    'Scrapbooking',
+    'Paper Crafting',
     'Paper Quilling & origami',
-    'Glass Painting',
-    'Lampworking',
-    'Glass Dying & Staining']
+    'Pottery',
+    'Weaving',
+    'Wood Curving']
     const arts = useLoaderData();
     return (
         <div>
