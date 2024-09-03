@@ -29,7 +29,7 @@ const SignUp = () => {
             return setError('Password must be 6 character')
         }
         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/.test(password)) {
-            setError('your password should be one uppercase and one lowercase and at least one numer')
+            setError('your password should be one uppercase and one lowercase and at least one number')
             return
         }
 

@@ -24,8 +24,10 @@ const AddArts = () => {
         const processing_time = form.processing_time.value;
         const stockStatus = form.stockStatus.value;
         const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization, processing_time, stockStatus }
+        // console.log(artItem);
+        // console.log(subcategory_Name);
 
-        fetch('https://crud-operaion.vercel.app/arts', {
+        fetch('http://localhost:5000/arts', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
@@ -61,7 +63,7 @@ const AddArts = () => {
                     />
                 </h1>
             </div>
-            <form onSubmit={handleAddItem} className="space-y-6 max-w-3xl mx-auto bg-gray-300 light:bg-white shadow-2xl p-10 border rounded-lg">
+            <form onSubmit={handleAddItem} className="space-y-6 max-w-3xl mx-auto dark:bg-slate-600 light:bg-white shadow-2xl p-10 border rounded-lg">
                 <div className="flex items-center lg:flex-row flex-col gap-9">
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="Email" className="block text-lg font-semibold text-gray-400 ">User Email
@@ -84,7 +86,10 @@ const AddArts = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:flex-row flex-col gap-9">
-                    
+                    {/* <div className="space-y-1 text-sm w-full">
+                        <label htmlFor="subcategory_Name" className="block text-lg font-semibold text-gray-400"></label>
+                        <input type='text' required name="subcategory_Name" id="subcategory_Name" placeholder="subcategory_Name" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
+                    </div> */}
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">subcategory_Name</label>
                         <select name="subcategory_Name" id="subcategory_Name" className="border border-gray-700 p-3 rounded-lg w-full">
@@ -112,7 +117,10 @@ const AddArts = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:flex-row flex-col gap-9">
-                    
+                    {/* <div className="space-y-1 text-sm w-full">
+                        <label htmlFor="customization" className="block  text-lg font-semibold text-gray-400">customization</label>
+                        <input type='text' required name="customization" id="customization" placeholder="yes or no" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
+                    </div> */}
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="customization" className="block text-lg font-semibold text-gray-400">customization</label>
                         <select name="customization" id="customization" className="border border-gray-700 p-3 rounded-lg w-full">
@@ -125,7 +133,10 @@ const AddArts = () => {
                         <input type='text' required name="processing_time" id=" processing_time" placeholder=" processing_time" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
                     </div>
                 </div>
-                
+                {/* <div className="space-y-1 text-sm w-1/2">
+                    <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400"> stockStatus</label>
+                    <input type='text' name="stockStatus" id=" stockStatus" placeholder="example- In stock or Made to Order" required className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
+                </div> */}
                 <div className="space-y-1 text-sm w-full">
                         <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">stockStatus</label>
                         <select name="stockStatus" id="stockStatus" className="border border-gray-700 p-3 rounded-lg w-full">
@@ -135,7 +146,7 @@ const AddArts = () => {
                     </div>
 
 
-                <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">Add to Database</button>
+                <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">Add to website</button>
             </form>
         </div>
     );

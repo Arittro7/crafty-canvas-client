@@ -19,7 +19,7 @@ const Card = ({ art }) => {
                     <h1 className="pt-5 font-bold text-2xl">{item_name}</h1>
                     <h3 className="font-semibold text-xl text-green-600">{subcategory_Name}</h3>
                     <div className="flex items-center justify-between">
-                        <p className="font-bold">Pirze : {price}$</p>
+                        <p className="font-bold">Price : ${price}</p>
                         <p className="flex items-center gap-2">Ratings : <FaStar className="text-yellow-400"></FaStar> {rating}</p>
                     </div>
                     <Link to={`/details/${_id}`}><button className="px-8 py-3 mt-5 bg-green-600 text-white font-semibold rounded-full w-full hover:bg-green-700 duration-300 transition">View Details</button></Link>

@@ -29,7 +29,7 @@ const CardDetails = () => {
                         Paper art and craft offer endless possibilities for creativity and expression, allowing artists and crafters to explore new techniques and push the boundaries of this versatile medium. Whether creating delicate origami figures, intricate paper sculptures, or vibrant paper collages, the beauty of paper art lies in its simplicity and accessibility.
                     </p>
                     <div className="flex items-center justify-between">
-                        <p className="font-bold">Pirze : {price}$</p>
+                        <p className="font-bold">Price : ${price}</p>
                         <p className="flex items-center gap-2">Ratings : <FaStar className="text-yellow-400"></FaStar> {rating}</p>
                     </div>
                     <div className="flex items-center justify-between">

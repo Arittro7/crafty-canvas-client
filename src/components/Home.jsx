@@ -2,10 +2,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import slider1 from '../assets/slider/67e2bc3504a9ebae30c43bae185ce010.jpg'
-import slider2 from '../assets/slider/7131mLRzYYL._AC_UF1000,1000_QL80_.jpg'
-import slider3 from '../assets/slider/91jFFgXWgVL.jpg'
-import slider4 from '../assets/slider/images.jpg'
+import slider1 from '../assets/slider/Papercutting.jpg'
+import slider2 from '../assets/slider/Pottery.jpg'
+import slider3 from '../assets/slider/Weaving.jpg'
+import slider4 from '../assets/slider/Wood Carving.jpg'
 import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import Card from './AllArts/Card';
 import { Typewriter } from 'react-simple-typewriter'
@@ -38,7 +38,7 @@ const Home = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-5xl font-bold">
                                     <Typewriter
-                                        words={['Glass Painting Set']}
+                                        words={['Paper Craft Set']}
                                         loop={Infinity}
                                         cursor
                                         cursorStyle='_'
@@ -47,7 +47,7 @@ const Home = () => {
                                         delaySpeed={1000}
                                     />
                                 </h1>
-                                <p className="mb-5">A set of high-quality glass paints and brushes for creating beautiful designs on glass surfaces.</p>
+                                <p className="mb-5">The art of cutting paper into decorative designs, often creating detailed images or patterns.</p>
                                 <Link to={'/allArts'}><button className="px-8 py-3 rounded-full font-bold bg-green-600">See All</button></Link>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ const Home = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-5xl font-bold">
                                     <Typewriter
-                                        words={['Paper Quilling Starter Kit']}
+                                        words={['Pottery Starter Kit']}
                                         loop={Infinity}
                                         cursor
                                         cursorStyle='_'
@@ -70,7 +70,7 @@ const Home = () => {
                                         delaySpeed={1000}
                                     />
                                 </h1>
-                                <p className="mb-5">Everything you need to start paper quilling - tools, strips, and instructions.</p>
+                                <p className="mb-5">The craft of shaping and firing clay to create functional or decorative items such as pots, bowls, and vases.</p>
                                 <Link to={'/allArts'}><button className="px-8 py-3 rounded-full font-bold bg-green-600">See All</button></Link>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ const Home = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-5xl font-bold">
                                     <Typewriter
-                                        words={['Handmade Greeting Cards Set']}
+                                        words={['Handmade Weaving Set']}
                                         loop={Infinity}
                                         cursor
                                         cursorStyle='_'
@@ -93,7 +93,7 @@ const Home = () => {
                                         delaySpeed={1000}
                                     />
                                 </h1>
-                                <p className="mb-5">A set of 6 beautifully crafted handmade greeting cards for various occasions.</p>
+                                <p className="mb-5">The process of interlacing threads on a loom to create fabric or textiles</p>
                                 <Link to={'/allArts'}><button className="px-8 py-3 rounded-full font-bold bg-green-600">See All</button></Link>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ const Home = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-5xl font-bold">
                                     <Typewriter
-                                        words={['Lampworking Starter Kit']}
+                                        words={['Wood Carving Starter Kit']}
                                         loop={Infinity}
                                         cursor
                                         cursorStyle='_'
@@ -117,7 +117,7 @@ const Home = () => {
                                     />
                                 </h1>
 
-                                <p className="mb-5">A comprehensive starter kit for lampworking, includes glass rods, torch, and safety gear.</p>
+                                <p className="mb-5">The art of shaping wood into decorative or functional objects by cutting, chiseling, and shaping.</p>
                                 <Link to={'/allArts'}><button className="px-8 py-3 rounded-full font-bold bg-green-600">See All</button></Link>
                             </div>
                         </div>

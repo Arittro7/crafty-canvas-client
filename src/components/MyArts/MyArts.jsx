@@ -28,7 +28,7 @@ const MyArts = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://crud-operaion.vercel.app/arts/${id}`, {
+                fetch(` http://localhost:5000/arts/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
