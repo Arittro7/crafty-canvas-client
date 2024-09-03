@@ -6,7 +6,8 @@ import { CgMail } from "react-icons/cg";
 import { IoIosLogOut } from "react-icons/io";
 import { Tooltip } from 'react-tooltip'
 import { toast } from "react-toastify";
-import myArt from '../../public/favicon.png'
+// import myArt from '../../public/favicon.png'
+import myArt from '../../public/logo.png'
 
 
 const Navbar = () => {
@@ -35,9 +36,9 @@ const Navbar = () => {
                     }
                 </div>
                 <Link to={'/'} className="navbar-start flex items-center">
-                    <img className="w-10 md:w-14" src={myArt} alt="" />
+                    <img className="w-10 md:w-20" src={myArt} alt="" />
                     <p className="text-2xl md:text-3xl font-bold cursor-pointer">
-                        My <span className="text-yellow-500">Arts</span></p>
+                        Crafty <span className="text-yellow-500">canvas</span></p>
                 </Link>
 
 
