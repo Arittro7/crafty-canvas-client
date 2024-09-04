@@ -1,9 +1,8 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
-import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const Card = ({ art }) => {
     const { _id, image_url, item_name, subcategory_Name, price, rating, stockStatus } = art;
     return (

@@ -288,8 +288,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?3" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Arittro</p>
-                                        <p>Founder & CEO</p>
+                                        <p className="text-xl font-semibold leading-snug">Saifta</p>
+                                        <p>UI Designer</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -318,8 +318,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?4" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Istiaqua Ahmed</p>
-                                        <p>Marketing</p>
+                                        <p className="text-xl font-semibold leading-snug">Arittro</p>
+                                        <p>Founder & CEO</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
@@ -348,8 +348,8 @@ const Home = () => {
                                 <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
                                     <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?5" />
                                     <div className="flex-1 my-4">
-                                        <p className="text-xl font-semibold leading-snug">Saifta</p>
-                                        <p>UI Designer</p>
+                                        <p className="text-xl font-semibold leading-snug">Istiaqua Ahmed</p>
+                                        <p>Marketing</p>
                                     </div>
                                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
                                         <a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
