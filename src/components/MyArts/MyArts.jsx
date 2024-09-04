@@ -108,7 +108,7 @@ const MyArts = () => {
                                 <h3 className="font-semibold text-xl text-green-600">{art.subcategory_Name}</h3>
                                 <p>{art.description}</p>
                                 <div className="flex items-center justify-between">
-                                    <p className="font-bold">Pirze : {art.price}$</p>
+                                    <p className="font-bold">Price : ${art.price}</p>
                                     <p className="flex items-center gap-2">Ratings : <FaStar className="text-yellow-400"></FaStar> {art.rating}</p>
                                 </div>
                                 <div className="flex space-y-3 flex-col justify-between">
