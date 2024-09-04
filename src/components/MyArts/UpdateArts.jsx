@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const UpdateArts = () => {
     let location = useLocation();
-    document.title =  `My Arts | ${location.pathname.slice(1)}`;
+    document.title =  `Crafty Canvas| ${location.pathname.slice(1)}`;
 
     const myArt = useLoaderData();
     const {user} = useContext(AuthContext)
@@ -24,10 +24,11 @@ const UpdateArts = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const customization = form.customization.value;
-        const processing_time = form.processing_time.value;
+        // const processing_time = form.processing_time.value;
         const stockStatus = form.stockStatus.value;
-        const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization, processing_time, stockStatus }
+        const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization,  stockStatus }
         console.log(artItem);
+        // processing_time,
 
         fetch(` http://localhost:5000/arts/${_id}`,{
             method: 'PUT',
@@ -96,10 +97,10 @@ const UpdateArts = () => {
                             <option defaultValue={subcategory_Name} value={subcategory_Name} >{subcategory_Name}</option>
                             <option value="Card Making" >Card Making</option>
                             <option value="Scrapbooking" >Scrapbooking</option>
-                            <option value="Paper Quilling & origami" >Paper Quilling & origami</option>
-                            <option value="Glass Painting" >Glass Painting</option>
-                            <option value="Lampworking" >Lampworking</option>
-                            <option value="Glass Dying & Staining" >Glass Dying & Staining</option>
+                            <option value="Paper Crafting" >Paper Crafting</option>
+                            <option value="Pottery" >Pottery</option>
+                            <option value="Weaving" >Weaving</option>
+                            <option value="Wood Curving" >Wood Curving</option>
                         </select>
                     </div>
                     <div className="space-y-1 text-sm w-full">
@@ -131,15 +132,6 @@ const UpdateArts = () => {
                         </select>
                     </div>
                     <div className="space-y-1 text-sm w-full">
-                        <label htmlFor=" processing_time" className="block text-lg font-semibold text-gray-400"> processing_time</label>
-                        <input type='text' defaultValue={processing_time} required name="processing_time" id=" processing_time" placeholder=" processing_time" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div>
-                </div>
-                {/* <div className="space-y-1 text-sm w-1/2">
-                    <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400"> stockStatus</label>
-                    <input type='text' name="stockStatus" id=" stockStatus" placeholder="example- In stock or Made to Order" required className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
-                </div> */}
-                <div className="space-y-1 text-sm w-full">
                         <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">stockStatus</label>
                         <select name="stockStatus" id="stockStatus" className="border border-gray-700 p-3 rounded-lg w-full">
                             <option defaultValue={stockStatus} value={stockStatus} >{stockStatus}</option>
@@ -147,7 +139,7 @@ const UpdateArts = () => {
                             <option value="Made to order" >Made to order</option>
                         </select>
                     </div>
-
+                </div>
 
                 <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">Update Your Item</button>
             </form>

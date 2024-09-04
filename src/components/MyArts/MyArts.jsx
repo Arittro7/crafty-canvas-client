@@ -8,7 +8,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const MyArts = () => {
     let location = useLocation();
-    document.title =  `My Arts | ${location.pathname.slice(1)}`;
+    document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
 
     const arts = useLoaderData();
     const { user } = useContext(AuthContext);

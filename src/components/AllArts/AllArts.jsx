@@ -4,8 +4,8 @@ import { Typewriter } from 'react-simple-typewriter'
 import { useState } from "react";
 
 const AllArts = () => {
-    // let location = useLocation();
-    // document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
+    let location = useLocation();
+    document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
 
     const itemArts = useLoaderData();
     const [arts, setArts] = useState(itemArts)
