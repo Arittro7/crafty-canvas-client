@@ -6,7 +6,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 
 const CardDetails = () => {
     let location = useLocation();
-    document.title =  `My Arts | ${location.pathname.slice(1)}`;
+    document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
 
     const art = useLoaderData();
     const { image_url, item_name, subcategory_Name, description, price, rating, stockStatus, customization, processing_time, Name, email } = art;

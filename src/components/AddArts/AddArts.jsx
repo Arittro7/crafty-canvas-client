@@ -4,9 +4,10 @@ import Swal from 'sweetalert2'
 import { Typewriter } from 'react-simple-typewriter'
 import { useLocation } from "react-router-dom";
 
+
 const AddArts = () => {
     let location = useLocation();
-    document.title =  `My Arts | ${location.pathname.slice(1)}`;
+    document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
 
     const { user } = useContext(AuthContext);
     const handleAddItem = e => {
@@ -21,11 +22,8 @@ const AddArts = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const customization = form.customization.value;
-        const processing_time = form.processing_time.value;
         const stockStatus = form.stockStatus.value;
-        const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization, processing_time, stockStatus }
-        // console.log(artItem);
-        // console.log(subcategory_Name);
+        const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization,  stockStatus }
 
         fetch('http://localhost:5000/arts', {
             method: 'post',
@@ -86,19 +84,16 @@ const AddArts = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:flex-row flex-col gap-9">
-                    {/* <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="subcategory_Name" className="block text-lg font-semibold text-gray-400"></label>
-                        <input type='text' required name="subcategory_Name" id="subcategory_Name" placeholder="subcategory_Name" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div> */}
+                    
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">subcategory_Name</label>
                         <select name="subcategory_Name" id="subcategory_Name" className="border border-gray-700 p-3 rounded-lg w-full">
                             <option value="Card Making" >Card Making</option>
                             <option value="Scrapbooking" >Scrapbooking</option>
-                            <option value="Paper Quilling & origami" >Paper Quilling & origami</option>
-                            <option value="Glass Painting" >Glass Painting</option>
-                            <option value="Lampworking" >Lampworking</option>
-                            <option value="Glass Dying & Staining" >Glass Dying & Staining</option>
+                            <option value="Paper Crafting" >Paper Crafting</option>
+                            <option value="Pottery" >Pottery</option>
+                            <option value="Weaving" >Weaving</option>
+                            <option value="Wood Curving" >Wood Curving</option>
                         </select>
                     </div>
                     <div className="space-y-1 text-sm w-full">
@@ -117,10 +112,7 @@ const AddArts = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:flex-row flex-col gap-9">
-                    {/* <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="customization" className="block  text-lg font-semibold text-gray-400">customization</label>
-                        <input type='text' required name="customization" id="customization" placeholder="yes or no" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div> */}
+                    
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="customization" className="block text-lg font-semibold text-gray-400">customization</label>
                         <select name="customization" id="customization" className="border border-gray-700 p-3 rounded-lg w-full">
@@ -128,24 +120,16 @@ const AddArts = () => {
                             <option value="No" >No</option>
                         </select>
                     </div>
+
                     <div className="space-y-1 text-sm w-full">
-                        <label htmlFor=" processing_time" className="block text-lg font-semibold text-gray-400"> processing_time</label>
-                        <input type='text' required name="processing_time" id=" processing_time" placeholder=" processing_time" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div>
-                </div>
-                {/* <div className="space-y-1 text-sm w-1/2">
-                    <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400"> stockStatus</label>
-                    <input type='text' name="stockStatus" id=" stockStatus" placeholder="example- In stock or Made to Order" required className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
-                </div> */}
-                <div className="space-y-1 text-sm w-full">
                         <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">stockStatus</label>
                         <select name="stockStatus" id="stockStatus" className="border border-gray-700 p-3 rounded-lg w-full">
                             <option value="In Stock" >In Stock</option>
                             <option value="Made to order" >Made to order</option>
                         </select>
                     </div>
-
-
+                </div>
+                
                 <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">Add to website</button>
             </form>
         </div>
