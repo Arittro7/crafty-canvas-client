@@ -1,139 +1,272 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import Swal from 'sweetalert2'
-import { Typewriter } from 'react-simple-typewriter'
+import Swal from "sweetalert2";
+import { Typewriter } from "react-simple-typewriter";
 import { useLocation } from "react-router-dom";
 
-
 const AddArts = () => {
-    let location = useLocation();
-    document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
+  let location = useLocation();
+  document.title = `Crafty Canvas | ${location.pathname.slice(1)}`;
 
-    const { user } = useContext(AuthContext);
-    const handleAddItem = e => {
-        e.preventDefault()
-        const form = e.target;
-        const email = form.email.value;
-        const Name = form.Name.value;
-        const image_url = form.image_url.value;
-        const subcategory_Name = form.subcategory_Name.value;
-        const item_name = form.item_name.value;
-        const description = form.description.value;
-        const price = form.price.value;
-        const rating = form.rating.value;
-        const customization = form.customization.value;
-        const stockStatus = form.stockStatus.value;
-        const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization,  stockStatus }
+  const { user } = useContext(AuthContext);
+  const handleAddItem = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const Name = form.Name.value;
+    const image_url = form.image_url.value;
+    const subcategory_Name = form.subcategory_Name.value;
+    const item_name = form.item_name.value;
+    const description = form.description.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const customization = form.customization.value;
+    const stockStatus = form.stockStatus.value;
+    const artItem = {
+      email,
+      Name,
+      image_url,
+      item_name,
+      subcategory_Name,
+      description,
+      price,
+      rating,
+      customization,
+      stockStatus,
+    };
 
-        fetch('http://localhost:5000/arts', {
-            method: 'post',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(artItem)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'success!',
-                        text: 'Your art craft added',
-                        icon: 'success',
-                        confirmButtonText: 'Ok'
-                    })
-                    form.reset()
-                }
-            })
-    }
-    return (
-        <div className="container mx-auto py-20 px-4">
-            <div className="py-5 text-center">
-                <h1 className="text-3xl font-bold">
-                    <Typewriter
-                        words={['Add Your Item']}
-                        loop={Infinity}
-                        cursor
-                        cursorStyle='_'
-                        typeSpeed={100}
-                        deleteSpeed={100}
-                        delaySpeed={1000}
-                    />
-                </h1>
-            </div>
-            <form onSubmit={handleAddItem} className="space-y-6 max-w-3xl mx-auto dark:bg-slate-600 light:bg-white shadow-2xl p-10 border rounded-lg">
-                <div className="flex items-center lg:flex-row flex-col gap-9">
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="Email" className="block text-lg font-semibold text-gray-400 ">User Email
-                        </label>
-                        <input type="email" required defaultValue={user.email} readOnly name="email" id="mail" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
-                    </div>
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="Name" className="block text-lg font-semibold text-gray-400">Name</label>
-                        <input type="text" required name="Name" readOnly defaultValue={user.displayName} id="Name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
-                    </div>
-                </div>
-                <div className="flex items-center lg:flex-row flex-col gap-9">
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="image" className="block text-lg font-semibold text-gray-400">image url</label>
-                        <input type="text" required name="image_url" id="image" placeholder="image url" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
-                    </div>
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="item_name" className="block text-lg font-semibold text-gray-400">item_name</label>
-                        <input type="text" required name="item_name" id="item_name" placeholder="item_name" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border" />
-                    </div>
-                </div>
-                <div className="flex items-center lg:flex-row flex-col gap-9">
-                    
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">subcategory_Name</label>
-                        <select name="subcategory_Name" id="subcategory_Name" className="border border-gray-700 p-3 rounded-lg w-full">
-                            <option value="Card Making" >Card Making</option>
-                            <option value="Scrapbooking" >Scrapbooking</option>
-                            <option value="Paper Crafting" >Paper Crafting</option>
-                            <option value="Pottery" >Pottery</option>
-                            <option value="Weaving" >Weaving</option>
-                            <option value="Wood Curving" >Wood Curving</option>
-                        </select>
-                    </div>
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="description" className="block  text-lg font-semibold text-gray-400">description</label>
-                        <input type='text' required name="description" id="description" placeholder="description" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div>
-                </div>
-                <div className="flex items-center lg:flex-row flex-col gap-9">
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="price" className="block text-lg font-semibold text-gray-400">price</label>
-                        <input type='text' required name="price" id="price" placeholder="price" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div>
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="rating" className="block text-lg font-semibold text-gray-400">rating</label>
-                        <input type='number' required name="rating" id="rating" placeholder="rating 1 to 5" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" maxLength={5} max={5} min={0} />
-                    </div>
-                </div>
-                <div className="flex items-center lg:flex-row flex-col gap-9">
-                    
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="customization" className="block text-lg font-semibold text-gray-400">customization</label>
-                        <select name="customization" id="customization" className="border border-gray-700 p-3 rounded-lg w-full">
-                            <option value="Yes" >Yes</option>
-                            <option value="No" >No</option>
-                        </select>
-                    </div>
-
-                    <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">stockStatus</label>
-                        <select name="stockStatus" id="stockStatus" className="border border-gray-700 p-3 rounded-lg w-full">
-                            <option value="In Stock" >In Stock</option>
-                            <option value="Made to order" >Made to order</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">Add to website</button>
-            </form>
+    fetch(
+      "https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts",
+      {
+        method: "post",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(artItem),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "success!",
+            text: "Your art craft added",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          form.reset();
+        }
+      });
+  };
+  return (
+    <div className="container mx-auto py-20 px-4">
+      <div className="py-5 text-center">
+        <h1 className="text-3xl font-bold">
+          <Typewriter
+            words={["Add Your Item"]}
+            loop={Infinity}
+            cursor
+            cursorStyle="_"
+            typeSpeed={100}
+            deleteSpeed={100}
+            delaySpeed={1000}
+          />
+        </h1>
+      </div>
+      <form
+        onSubmit={handleAddItem}
+        className="space-y-6 max-w-3xl mx-auto dark:bg-slate-600 light:bg-white shadow-2xl p-10 border rounded-lg"
+      >
+        <div className="flex items-center lg:flex-row flex-col gap-9">
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="Email"
+              className="block text-lg font-semibold text-gray-400 "
+            >
+              User Email
+            </label>
+            <input
+              type="email"
+              required
+              defaultValue={user.email}
+              readOnly
+              name="email"
+              id="mail"
+              placeholder="Email"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border"
+            />
+          </div>
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="Name"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              required
+              name="Name"
+              readOnly
+              defaultValue={user.displayName}
+              id="Name"
+              placeholder="Name"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border"
+            />
+          </div>
         </div>
-    );
+        <div className="flex items-center lg:flex-row flex-col gap-9">
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="image"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              image url
+            </label>
+            <input
+              type="text"
+              required
+              name="image_url"
+              id="image"
+              placeholder="image url"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border"
+            />
+          </div>
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="item_name"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              item_name
+            </label>
+            <input
+              type="text"
+              required
+              name="item_name"
+              id="item_name"
+              placeholder="item_name"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100 focus:border-violet-400 border"
+            />
+          </div>
+        </div>
+        <div className="flex items-center lg:flex-row flex-col gap-9">
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="stockStatus"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              subcategory_Name
+            </label>
+            <select
+              name="subcategory_Name"
+              id="subcategory_Name"
+              className="border border-gray-700 p-3 rounded-lg w-full"
+            >
+              <option value="Card Making">Card Making</option>
+              <option value="Scrapbooking">Scrapbooking</option>
+              <option value="Paper Crafting">Paper Crafting</option>
+              <option value="Pottery">Pottery</option>
+              <option value="Weaving">Weaving</option>
+              <option value="Wood Curving">Wood Curving</option>
+            </select>
+          </div>
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="description"
+              className="block  text-lg font-semibold text-gray-400"
+            >
+              description
+            </label>
+            <input
+              type="text"
+              required
+              name="description"
+              id="description"
+              placeholder="description"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border"
+            />
+          </div>
+        </div>
+        <div className="flex items-center lg:flex-row flex-col gap-9">
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="price"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              price
+            </label>
+            <input
+              type="text"
+              required
+              name="price"
+              id="price"
+              placeholder="price"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border"
+            />
+          </div>
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="rating"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              rating
+            </label>
+            <input
+              type="number"
+              required
+              name="rating"
+              id="rating"
+              placeholder="rating 1 to 5"
+              className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border"
+              maxLength={5}
+              max={5}
+              min={0}
+            />
+          </div>
+        </div>
+        <div className="flex items-center lg:flex-row flex-col gap-9">
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="customization"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              customization
+            </label>
+            <select
+              name="customization"
+              id="customization"
+              className="border border-gray-700 p-3 rounded-lg w-full"
+            >
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div className="space-y-1 text-sm w-full">
+            <label
+              htmlFor="stockStatus"
+              className="block text-lg font-semibold text-gray-400"
+            >
+              stockStatus
+            </label>
+            <select
+              name="stockStatus"
+              id="stockStatus"
+              className="border border-gray-700 p-3 rounded-lg w-full"
+            >
+              <option value="In Stock">In Stock</option>
+              <option value="Made to order">Made to order</option>
+            </select>
+          </div>
+        </div>
+
+        <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">
+          Add to website
+        </button>
+      </form>
+    </div>
+  );
 };
 
 export default AddArts;
