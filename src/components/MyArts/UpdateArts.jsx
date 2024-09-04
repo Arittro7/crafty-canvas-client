@@ -11,7 +11,7 @@ const UpdateArts = () => {
 
     const myArt = useLoaderData();
     const {user} = useContext(AuthContext)
-    const { _id, image_url, item_name, subcategory_Name, price, rating, stockStatus, description, processing_time, customization} = myArt;
+    const { _id, image_url, item_name, subcategory_Name, price, rating, stockStatus, description, customization} = myArt;
     const updateMyArt = e =>{
         e.preventDefault()
         const form = e.target;
@@ -24,11 +24,10 @@ const UpdateArts = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const customization = form.customization.value;
-        // const processing_time = form.processing_time.value;
         const stockStatus = form.stockStatus.value;
         const artItem = { email, Name, image_url, item_name, subcategory_Name, description, price, rating, customization,  stockStatus }
         console.log(artItem);
-        // processing_time,
+        
 
         fetch(` http://localhost:5000/arts/${_id}`,{
             method: 'PUT',
@@ -87,10 +86,6 @@ const UpdateArts = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:flex-row flex-col gap-9">
-                    {/* <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="subcategory_Name" className="block text-lg font-semibold text-gray-400"></label>
-                        <input type='text' required name="subcategory_Name" id="subcategory_Name" placeholder="subcategory_Name" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div> */}
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">subcategory_Name</label>
                         <select name="subcategory_Name" id="subcategory_Name" className="border border-gray-700 p-3 rounded-lg w-full">
@@ -119,10 +114,6 @@ const UpdateArts = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:flex-row flex-col gap-9">
-                    {/* <div className="space-y-1 text-sm w-full">
-                        <label htmlFor="customization" className="block  text-lg font-semibold text-gray-400">customization</label>
-                        <input type='text' required name="customization" id="customization" placeholder="yes or no" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
-                    </div> */}
                     <div className="space-y-1 text-sm w-full">
                         <label htmlFor="customization" className="block text-lg font-semibold text-gray-400">customization</label>
                         <select name="customization" id="customization" className="border border-gray-700 p-3 rounded-lg w-full">
@@ -140,7 +131,6 @@ const UpdateArts = () => {
                         </select>
                     </div>
                 </div>
-
                 <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">Update Your Item</button>
             </form>
         </div>
