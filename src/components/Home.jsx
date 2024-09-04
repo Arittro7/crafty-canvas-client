@@ -383,7 +383,7 @@ const Home = () => {
                 {/* members are saying */}
                 <section className="my-8">
                     <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
-                        <h1 className="text-4xl font-semibold leading-none text-center">What our members are saying about us</h1>
+                        <h1 className="text-4xl font-semibold leading-none text-center">Testimonial</h1>
                     </div>
                     <Swiper
                         pagination={{
@@ -436,14 +436,14 @@ const Home = () => {
                                         <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                                         <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                                     </svg>
-                                    <p className="px-6 py-1 text-lg italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.</p>
+                                    <p className="px-6 py-1 text-lg italic">"This organization feels like a second family to me. The dedication and passion of every member are truly inspiring. We are always encouraged to bring our ideas to the table, and there’s a genuine spirit of innovation and teamwork. Being part of this group has allowed me to connect with like-minded individuals, and together, we’ve achieved incredible things. I can’t imagine being anywhere else."</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute bottom-0 right-0 w-8 h-8 text-gray-700">
                                         <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                                         <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
                                     </svg>
                                 </div>
                                 <span className="w-12 h-1 my-2 rounded-lg bg-violet-400"></span>
-                                <p>Leroy Jenkins</p>
+                                <p>Pranto</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -453,14 +453,14 @@ const Home = () => {
                                         <path fill="currentColor" d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                                         <path fill="currentColor" d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                                     </svg>
-                                    <p className="px-6 py-1 text-lg italic">Accusantium illum cupiditate harum asperiores iusto quos quasi quis quae! Fugit doloribus, voluptatum quidem magnam velit excepturi nobis, reprehenderit ducimus incidunt quisquam quae veritatis, quos iure harum.</p>
+                                    <p className="px-6 py-1 text-lg italic">"This organization has been a game-changer for me. From day one, I felt welcomed and supported by everyone here. The opportunities for learning and development are incredible, and I’ve been able to take on roles and responsibilities that have significantly boosted my confidence and skills. What stands out the most is the sense of community—we truly work as a team, and everyone is committed to helping each other succeed. It’s a place where you can thrive and make a real impact."</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="absolute bottom-0 right-0 w-8 h-8 text-gray-700">
                                         <path fill="currentColor" d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                                         <path fill="currentColor" d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
                                     </svg>
                                 </div>
                                 <span className="w-12 h-1 my-2 rounded-lg bg-violet-400"></span>
-                                <p>Leroy Jenkins</p>
+                                <p>Saifta</p>
                             </div>
                         </SwiperSlide>
                     </Swiper>

@@ -10,11 +10,11 @@ const AllArts = () => {
     const itemArts = useLoaderData();
     const [arts, setArts] = useState(itemArts)
     const buttons = ['Card Making',
-    'Scrapbooking',
+    'Paper Crafting',
     'Paper Quilling & origami',
-    'Glass Painting',
-    'Lampworking',
-    'Glass Dying & Staining']
+    'Pottery',
+    'Weaving',
+    'Wood Curving']
 
     const handleCategories = (btn) =>{
         const result = itemArts.filter(art => art.subcategory_Name === btn)
