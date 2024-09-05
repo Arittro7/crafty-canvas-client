@@ -48,16 +48,13 @@ const UpdateArts = () => {
     };
     console.log(artItem);
 
-    fetch(
-      ` https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(artItem),
-      }
-    )
+    fetch(`http://localhost:5000/arts/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(artItem),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {

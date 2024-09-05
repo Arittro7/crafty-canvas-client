@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from './App.jsx'
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/Error/ErrorPage.jsx";
@@ -25,10 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>
-          fetch(
-            "https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts"
-          ),
+        loader: () => fetch("http://localhost:5000/arts"),
       },
       {
         path: "/login",
@@ -41,10 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/allArts",
         element: <AllArts></AllArts>,
-        loader: () =>
-          fetch(
-            "https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts"
-          ),
+        loader: () => fetch("http://localhost:5000/arts"),
       },
       {
         path: "/details/:id",
@@ -54,9 +47,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts/${params.id}`
-          ),
+          fetch(`http://localhost:5000/arts/${params.id}`),
       },
       {
         path: "/AddArts",
@@ -73,18 +64,13 @@ const router = createBrowserRouter([
             <MyArts></MyArts>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch(
-            "https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts"
-          ),
+        loader: () => fetch("http://localhost:5000/arts"),
       },
       {
         path: "/updateArts/:id",
         element: <UpdateArts></UpdateArts>,
         loader: ({ params }) =>
-          fetch(
-            `https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts/${params.id}`
-          ),
+          fetch(`http://localhost:5000/arts/${params.id}`),
       },
     ],
   },

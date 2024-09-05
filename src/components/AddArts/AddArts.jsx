@@ -35,16 +35,13 @@ const AddArts = () => {
       stockStatus,
     };
 
-    fetch(
-      "https://crafty-canvas-server-em5iysxl2-arittros-projects.vercel.app/arts",
-      {
-        method: "post",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(artItem),
-      }
-    )
+    fetch("http://localhost:5000/arts", {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(artItem),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
