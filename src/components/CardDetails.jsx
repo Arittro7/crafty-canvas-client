@@ -9,7 +9,7 @@ const CardDetails = () => {
     document.title =  `Crafty Canvas | ${location.pathname.slice(1)}`;
 
     const art = useLoaderData();
-    const { image_url, item_name, subcategory_Name, description, price, rating, stockStatus, customization, Name, email } = art;
+    const { image_url, item_name, subcategory_Name, description, price, rating, stockStatus, customization, processing_time, Name, email } = art;
     return (
         <div className="container mx-auto py-32 px-4">
             <div className="bg-slate-50 text-slate-900 p-5 rounded-xl shadow-2xl border hover:border-green-500 duration-300 transition max-w-3xl 
@@ -34,7 +34,7 @@ const CardDetails = () => {
                     </div>
                     <div className="flex items-center justify-between">
                         <p className="">Customization  : <span className="text-base font-bold">{customization}</span></p>
-                        {/* <p className="">Proccesing Time : <span className="text-base font-bold">{processing_time}</span></p> */}
+                        <p className="">Processing Time : <span className="text-base font-bold">{processing_time}</span></p>
                     </div>
                     
                     <div className="overflow-x-auto border-t-2 py-5">
