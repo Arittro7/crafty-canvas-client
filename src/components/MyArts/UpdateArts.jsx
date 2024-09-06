@@ -51,16 +51,13 @@ const UpdateArts = () => {
     };
     console.log(artItem);
 
-    fetch(
-      `https://https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(artItem),
-      }
-    )
+    fetch(`https://https://crafty-canvas-server-tau.vercel.app/arts/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(artItem),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
@@ -268,25 +265,19 @@ const UpdateArts = () => {
             </select>
           </div>
           <div className="space-y-1 text-sm w-full">
-            <label
-              htmlFor="stockStatus"
-              className="block text-lg font-semibold text-gray-400"
-            >
-              stockStatus
-            </label>
-            <select
-              name="stockStatus"
-              id="stockStatus"
-              className="border border-gray-700 p-3 rounded-lg w-full"
-            >
-              <option defaultValue={stockStatus} value={stockStatus}>
-                {stockStatus}
-              </option>
-              <option value="In Stock">In Stock</option>
-              <option value="Made to order">Made to order</option>
-            </select>
-          </div>
+                        <label htmlFor=" processing_time" className="block text-lg font-semibold text-gray-400"> processing_time</label>
+                        <input type='text' defaultValue={processing_time} required name="processing_time" id=" processing_time" placeholder=" processing_time" className="w-full px-4 py-3 rounded-md border-gray-700 text-gray-900 bg-gray-100  focus:border-violet-400 border" />
+                    </div>
         </div>
+
+        <div className="space-y-1 text-sm w-full">
+                        <label htmlFor="stockStatus" className="block text-lg font-semibold text-gray-400">stockStatus</label>
+                        <select name="stockStatus" id="stockStatus" className="border border-gray-700 p-3 rounded-lg w-full">
+                            <option defaultValue={stockStatus} value={stockStatus} >{stockStatus}</option>
+                            <option value="In Stock" >In Stock</option>
+                            <option value="Made to order" >Made to order</option>
+                        </select>
+                    </div>
 
         <button className="block w-full p-3 text-center rounded-sm text-white bg-green-600">
           Update Your Item

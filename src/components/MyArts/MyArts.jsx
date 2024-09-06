@@ -28,12 +28,9 @@ const MyArts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`https://crafty-canvas-server-tau.vercel.app/arts/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
