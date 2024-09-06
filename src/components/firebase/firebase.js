@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB9ud26b0nDv3cH1k6L3RHrOmEHHIM1wPI",
-  authDomain: "crafty-canvas-c8b4f.firebaseapp.com",
-  projectId: "crafty-canvas-c8b4f",
-  storageBucket: "crafty-canvas-c8b4f.appspot.com",
-  messagingSenderId: "1073717921233",
-  appId: "1:1073717921233:web:7c676334eacadb55530cf0"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

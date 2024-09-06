@@ -24,7 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://crafty-canvas-server-tau.vercel.app/arts"),
+        loader: () =>
+          fetch(
+            "https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts"
+          ),
       },
       {
         path: "/login",
@@ -37,7 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/allArts",
         element: <AllArts></AllArts>,
-        loader: () => fetch("https://crafty-canvas-server-tau.vercel.app/arts"),
+        loader: () =>
+          fetch(
+            "https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts"
+          ),
       },
       {
         path: "/details/:id",
@@ -48,7 +54,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://crafty-canvas-server-tau.vercel.app/arts/${params.id}`
+            `https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts/${params.id}`
           ),
       },
       {
@@ -66,14 +72,17 @@ const router = createBrowserRouter([
             <MyArts></MyArts>
           </PrivateRoute>
         ),
-        loader: () => fetch("https://crafty-canvas-server-tau.vercel.app/arts"),
+        loader: () =>
+          fetch(
+            "https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts"
+          ),
       },
       {
         path: "/updateArts/:id",
         element: <UpdateArts></UpdateArts>,
         loader: ({ params }) =>
           fetch(
-            `https://crafty-canvas-server-tau.vercel.app/arts/${params.id}`
+            `https://crafty-canvas-server-mry8zdckb-arittros-projects.vercel.app/arts/${params.id}`
           ),
       },
     ],
