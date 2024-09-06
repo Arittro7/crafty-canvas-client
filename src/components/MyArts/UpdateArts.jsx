@@ -51,7 +51,7 @@ const UpdateArts = () => {
     };
     console.log(artItem);
 
-    fetch(`https://https://crafty-canvas-server-tau.vercel.app/arts/${_id}`, {
+    fetch(`https://crafty-canvas-server-tau.vercel.app/arts/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
